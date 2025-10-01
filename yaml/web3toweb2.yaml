@@ -1,0 +1,38 @@
+Name: testing-builder4
+Trigger:
+  TriggerSourceContract: 0x5E628888B44431307557EB4F6ff6DFcc661a79EF
+  TriggerChainID: 80002
+  TriggerEventName: Profile(string,uint256)
+  TriggerEventFilter: NA
+  TriggerSourceContractABI: W3siYW5vbnltb3VzIjpmYWxzZSwiaW5wdXRzIjpbeyJpbmRleGVkIjpmYWxzZSwiaW50ZXJuYWxUeXBlIjoic3RyaW5nIiwibmFtZSI6IiIsInR5cGUiOiJzdHJpbmcifSx7ImluZGV4ZWQiOmZhbHNlLCJpbnRlcm5hbFR5cGUiOiJ1aW50MjU2IiwibmFtZSI6IiIsInR5cGUiOiJ1aW50MjU2In1dLCJuYW1lIjoiUHJvZmlsZSIsInR5cGUiOiJldmVudCJ9LHsiaW5wdXRzIjpbXSwibmFtZSI6ImFnZSIsIm91dHB1dHMiOlt7ImludGVybmFsVHlwZSI6InVpbnQyNTYiLCJuYW1lIjoiIiwidHlwZSI6InVpbnQyNTYifV0sInN0YXRlTXV0YWJpbGl0eSI6InZpZXciLCJ0eXBlIjoiZnVuY3Rpb24ifSx7ImlucHV0cyI6W10sIm5hbWUiOiJuYW1lIiwib3V0cHV0cyI6W3siaW50ZXJuYWxUeXBlIjoic3RyaW5nIiwibmFtZSI6IiIsInR5cGUiOiJzdHJpbmcifV0sInN0YXRlTXV0YWJpbGl0eSI6InZpZXciLCJ0eXBlIjoiZnVuY3Rpb24ifSx7ImlucHV0cyI6W3siaW50ZXJuYWxUeXBlIjoic3RyaW5nIiwibmFtZSI6Il9uYW1lIiwidHlwZSI6InN0cmluZyJ9LHsiaW50ZXJuYWxUeXBlIjoidWludDI1NiIsIm5hbWUiOiJfYWdlIiwidHlwZSI6InVpbnQyNTYifV0sIm5hbWUiOiJwcm9maWxlIiwib3V0cHV0cyI6W10sInN0YXRlTXV0YWJpbGl0eSI6Im5vbnBheWFibGUiLCJ0eXBlIjoiZnVuY3Rpb24ifV0=
+  TriggerPrice: NA
+  RecurringSourceContract: 0x5E628888B44431307557EB4F6ff6DFcc661a79EF
+  RecurringChainID: 80002
+  RecurringEventName: Profile(string,uint256)
+  RecurringEventFilter: NA
+  RecurringSourceContractABI: W3siYW5vbnltb3VzIjpmYWxzZSwiaW5wdXRzIjpbeyJpbmRleGVkIjpmYWxzZSwiaW50ZXJuYWxUeXBlIjoic3RyaW5nIiwibmFtZSI6IiIsInR5cGUiOiJzdHJpbmcifSx7ImluZGV4ZWQiOmZhbHNlLCJpbnRlcm5hbFR5cGUiOiJ1aW50MjU2IiwibmFtZSI6IiIsInR5cGUiOiJ1aW50MjU2In1dLCJuYW1lIjoiUHJvZmlsZSIsInR5cGUiOiJldmVudCJ9LHsiaW5wdXRzIjpbXSwibmFtZSI6ImFnZSIsIm91dHB1dHMiOlt7ImludGVybmFsVHlwZSI6InVpbnQyNTYiLCJuYW1lIjoiIiwidHlwZSI6InVpbnQyNTYifV0sInN0YXRlTXV0YWJpbGl0eSI6InZpZXciLCJ0eXBlIjoiZnVuY3Rpb24ifSx7ImlucHV0cyI6W10sIm5hbWUiOiJuYW1lIiwib3V0cHV0cyI6W3siaW50ZXJuYWxUeXBlIjoic3RyaW5nIiwibmFtZSI6IiIsInR5cGUiOiJzdHJpbmcifV0sInN0YXRlTXV0YWJpbGl0eSI6InZpZXciLCJ0eXBlIjoiZnVuY3Rpb24ifSx7ImlucHV0cyI6W3siaW50ZXJuYWxUeXBlIjoic3RyaW5nIiwibmFtZSI6Il9uYW1lIiwidHlwZSI6InN0cmluZyJ9LHsiaW50ZXJuYWxUeXBlIjoidWludDI1NiIsIm5hbWUiOiJfYWdlIiwidHlwZSI6InVpbnQyNTYifV0sIm5hbWUiOiJwcm9maWxlIiwib3V0cHV0cyI6W10sInN0YXRlTXV0YWJpbGl0eSI6Im5vbnBheWFibGUiLCJ0eXBlIjoiZnVuY3Rpb24ifV0=
+  RecurringPrice: NA
+  RepeatEvery: event
+  ExecuteAfter: event
+  ExpiresIn: 1758196885
+  Meta: NA
+  ActionStatusNotificationPOSTURL: https://workflow-notification-test.kalp.network/push_notification
+  ActionStatusNotificationAPIKey: NA
+Actions:
+  - Name: ApiCall
+    Type: post
+    APIEndpoint: http://64.227.188.32:3000/api/dagRuns
+    APIPayload:
+      name: re.event("\["([^"]+)"")
+      age: re.event(",\s*"([^"]+)"")
+    TargetContract: NA
+    TargetFunction: NA
+    TargetParams:
+      NA
+    ChainID: NA
+    EncodedABI: NA
+    Bytecode: NA
+    Metadata: NA
+    RetriesUntilSuccess: 5
+Execution:
+  Mode: parallel
